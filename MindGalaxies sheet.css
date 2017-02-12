@@ -1,0 +1,732 @@
+.itemcontrol {
+    z-index: 10;
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 0px;
+    }
+
+div.sheet-tab-content { display: none; }
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2,
+input.sheet-tab3:checked ~ div.sheet-tab3,
+input.sheet-tab4:checked ~ div.sheet-tab4,
+input.sheet-tab5:checked ~ div.sheet-tab5,
+input.sheet-tab6:checked ~ div.sheet-tab6
+{
+    display: block;
+}
+
+input.sheet-tab
+{
+    width: 135px;
+    height: 20px;
+    position: relative;
+    left: 5px;
+    top: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+input.sheet-tab::before
+{
+    content: attr(title);
+    border: solid 1px #002db3;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    background: #002db3;
+    color: #fff;    
+    width: 135px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+input.sheet-tab:checked::before
+{
+    background: #fff;
+    color: #002db3;
+    border-bottom-color: #fff;
+    z-index: 10;
+}
+
+div.sheet-tab-content
+{
+    background: #fff;
+    border: 1px solid #002db3;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin: 2px 0 0 5px;
+    padding: 4px;
+    width: 830px;
+}
+
+.sheet-tab-content input {
+    vertical-align: middle;
+    text-align: center;
+}
+
+select {
+    width: 110px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    }
+
+h3 {
+    text-align: center;
+    margin: 10px;
+    }
+
+/* CSS Formating from Galaxies of the Mind Web Site Character Sheet */
+.sheet-main {
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+	border-radius: 10px;
+	border: 3px solid #002db3;
+	width: 825px;
+	height: 350px;
+	position: relative;
+	}
+
+.sheet-ch-info {
+	width: 100%;
+	padding-bottom: 5px;
+	border-bottom: 3px solid #002db3;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+
+.sheet-logo {
+	height: 120px;
+	width: 220px;
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	}
+
+.sheet-info-block {
+	width: 100%;
+	}
+
+.sheet-info-table {
+	width: 580px;
+    }
+
+.sheet-info-table th {
+	height: 20px;
+	font-size: 12pt;
+	font-weight: normal;
+	text-align: right;
+	}
+	
+.sheet-info-table td {
+	width: 35%;
+	}
+
+.sheet-layout-box {
+    width: 825px;
+	height: 400px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-ch-attr {
+	position: relative;
+	left: 10px;
+	width: 600px;
+	}
+
+.sheet-attr-table {
+    width: 580px;
+	padding: 0px;
+	}
+
+.sheet-attr-table td.sheet-c1 {
+	width: 38%;
+	}
+
+.sheet-attr-table td.sheet-c2 {
+	width: 40%;
+	}
+
+.sheet-attr-table td.sheet-c3 {
+	width: 22%;
+	}
+
+input.sheet-at-box {
+	width: 35px;
+	text-align: center;
+	}
+
+input[type="number"].sheet-at-box {
+	width: 35px;
+	}
+	
+.sheet-cp-attr {
+    position: absolute;
+    right: 0px;
+    top: 160px;
+    width: 225px;
+	height: 190px;
+	border-left: 3px solid #002db3;
+	}
+
+.sheet-cp-table {
+	width: 205px;
+	border: collapse;
+	}
+
+.sheet-cp-table td.sheet-c1 {
+	width: 70%;
+	text-align: right;
+	line-height: 23px;
+	}
+
+.sheet-cp-table td.sheet-c2 {
+	width: 30%;
+	text-align: left;
+	line-height: 23px;
+	}
+
+.sheet-cp-table td.sheet-c3 {
+	width: 100%;
+	text-align: center;
+	line-height: 23px;
+	}
+
+.sheet-at-box2 {
+	width: 60px;
+	text-align: center;
+	}
+
+input[type="number"].sheet-at-box2 {
+	width: 60px;
+	}
+
+.sheet-hp-attr {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+	width: 275px;
+	height: 100%;
+	border-left: 3px solid #002db3;
+	}
+
+.sheet-skill-attr {
+	width: 825px;
+	position: absolute;
+	left 0px;
+	top: 0px;
+	}
+
+.sheet-skill-table {
+    position: relative;
+    left: 10px;
+	width: 810px;
+	border: collapse;
+	}
+	
+.sheet-skill-table td {
+	width: 270px;
+	text-align: left;
+	line-height: 27px;
+	}
+
+.sheet-skill-ck {
+	background: #dddddd;
+	width: 35px;
+	}
+
+.sheet-sk-label {
+	font-weight: bold;
+	line-height: 27px;
+	}
+
+.sheet-hp-table {
+    width: 275px;
+    border: collapse;
+    position: relative;
+    right: 0px;
+    }
+
+.sheet-hp-table td.sheet-c1 {
+	text-align: right;
+	line-height: 27px;
+	}
+
+.sheet-hp-table td.sheet-c2 {
+	text-align: center;
+	line-height: 27px;
+	}
+
+.sheet-hp-table td.sheet-c3 {
+	text-align: left;
+	line-height: 27px;
+	}
+
+.sheet-hp-table th {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 1px;
+    }
+
+.sheet-hp-block {
+    width: 150px;
+	text-align: center;
+    }
+
+.sheet-layout-box2 {
+    width: 825px;
+    height: 265px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 16px;
+    }
+
+.sheet-movement-attr {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	width: 200px;
+	height: 100%;
+	padding: 5px;
+	}
+
+.sheet-xp-attr {
+    position: absolute;
+    right: -10px;
+    top: 0px;
+	width: 625px;
+	height: 265px;
+	border-left: 3px solid #002db3;
+	padding: 5px;
+	}
+
+.sheet-xp-table {
+    width: 615px;
+    border: collapse;
+    position: relative;
+    }
+
+.sheet-xp-table th.sheet-h1 {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    }
+
+.sheet-xp-table th.sheet-h2 {
+    text-align: center;
+    font-weight: bold;
+    width: 35px;
+    }
+
+.sheet-xp-table td.sheet-c1 {
+    text-align: right;
+    }
+
+.sheet-xp-table td.sheet-c2 {
+    text-align: center;
+    }
+
+.sheet-xp-table td.sheet-c3 {
+    text-align: left;
+    }
+
+.sheet-xp-block {
+    width: 90px;
+	text-align: center;
+    }
+
+.sheet-resist-table {
+    width: 615px;
+    border: collapse;
+    position: relative;
+    }
+
+.sheet-resist-table th.sheet-h1 {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    }
+
+.sheet-resist-table th.sheet-h2 {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 40px;
+    }
+
+.sheet-resist-table td.sheet-c1 {
+    text-align: right;
+    }
+
+.sheet-resist-table td.sheet-c2 {
+    text-align: center;
+    }
+
+.sheet-resist-table td.sheet-c3 {
+    text-align: left;
+    }
+
+.sheet-layout-box3 {
+    width: 825px;
+	height: 370px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-armor-attr {
+	width: 550px;
+	position: absolute;
+	left 0px;
+	top: 0px;
+	}
+
+.sheet-armor-table {
+    width: 530px;
+    border: collapse;
+    position: relative;
+    left: 10px;
+    }
+
+.sheet-armor-table th {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    }
+
+.sheet-armortable th.sheet-h2 {
+    width: 40px;
+    }
+
+.sheet-armor-table td.sheet-c1 {
+    text-align: right;
+    }
+
+.sheet-armor-table td.sheet-c2 {
+    text-align: center;
+    }
+
+.sheet-armor-table td.sheet-c3 {
+    text-align: left;
+    }
+
+.sheet-armor-table td.sheet-c4 {
+    text-align: left;
+    width: 30px;
+    }
+
+.sheet-armor-block {
+    width: 150px;
+    }
+
+.sheet-at-box3 {
+	width: 45px;
+	text-align: center;
+	}
+
+.sheet-layout-box4 {
+    width: 825px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-weapons-attr {
+    width: 100%;
+    padding: 8px;
+    }
+
+.sheet-repweapon-table {
+    width: 810px;
+    }
+
+.sheet-repweapon-table input{
+    height: 22px;
+    font-size: 16px;
+    padding: 0px;
+    vertical-align: middle;
+    }
+
+.sheet-repweapon-table select{
+    height: 22px;
+    width: 80px;
+    font-size: 16px;
+    padding: 0px;
+    vertical-align: middle;
+    }
+
+.sheet-at-box4 {
+	width: 160px;
+	text-align: center;
+	}
+
+
+div.sheet-pwrtab-content { display: none; }
+
+input.sheet-pwrtab1:checked ~ div.sheet-pwrtab1,
+input.sheet-pwrtab2:checked ~ div.sheet-pwrtab2,
+input.sheet-pwrtab3:checked ~ div.sheet-pwrtab3,
+input.sheet-pwrtab4:checked ~ div.sheet-pwrtab4,
+input.sheet-pwrtab5:checked ~ div.sheet-pwrtab5
+{
+    display: block;
+}
+
+input.sheet-pwrtab
+{
+    width: 135px;
+    height: 20px;
+    position: relative;
+    left: 6px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+input.sheet-pwrtab::before
+{
+    content: attr(title);
+    border: solid 1px #002db3;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: #002db3;
+    color: #fff;    
+    width: 135px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px;
+}
+
+input.sheet-pwrtab:checked::before
+{
+    background: #fff;
+    color: #002db3;
+}
+
+div.sheet-pwrtab-content
+{
+    background: #fff;
+    border: none;
+    width: 825px;
+}
+
+fieldset.sheet-repeating_power {
+    }
+
+.sheet-layout-powers {
+    width: 825px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 12px;
+	margin-top: 10px;
+    }
+
+.sheet-pwr-table {
+    width: 805px;
+    border: collapse;
+    margin: 5px;
+    }
+
+.sheet-pwr-table th {
+    background: #002db3;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    }
+
+.sheet-pwr-table td.sheet-c1 {
+    text-align: right;
+    }
+
+.sheet-pwr-table td.sheet-c2 {
+    text-align: center;
+    }
+
+.sheet-pwr-table td.sheet-c3 {
+    text-align: left;
+    }
+
+.sheet-pwr-desc {
+    width: 795px;
+    height: 75px;
+    overflow: auto;
+    }
+
+
+div.sheet-chk-content { display: none; }
+
+input.sheet-chk1:checked ~ div.sheet-chk1,
+input.sheet-chk2:checked ~ div.sheet-chk2,
+input.sheet-chk3:checked ~ div.sheet-chk3,
+input.sheet-chk4:checked ~ div.sheet-chk4,
+input.sheet-chk5:checked ~ div.sheet-chk5
+    {
+    display: block;
+    }
+
+input.sheet-chk {
+    width: 120px;
+    height: 20px;
+    position: relative;
+    left: 20px;
+    margin: 5px;
+    cursor: pointer;
+    }
+
+input.sheet-chk::before {
+    content: attr(title);
+    border: solid 1px #002db3;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    background: #002db3;
+    color: #fff;    
+    width: 120px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    }
+
+input.sheet-chk:checked::before {
+    background: #fff;
+    color: #002db3;
+    }
+
+div.sheet-chk-content {
+    width: 805px;
+    margin: 5px;
+    border: 1px dashed #002db3;
+    }
+
+div.sheet-pwrtab-content input {
+    height: 20px;
+    font-size: 16px;
+    }
+
+div.sheet-pwrtab-content select {
+    height: 20px;
+    font-size: 14px;
+    margin-bottom: 0px;
+    vertical-align: top;
+    }
+
+.sheet-pwr-box {
+    width: 40px;
+	text-align: center;
+    }
+
+.sheet-pwr-box2 {
+    width: 80px;
+	text-align: center;
+    }
+
+.sheet-pwr-box3 {
+    width: 120px;
+	text-align: center;
+    }
+
+
+
+
+/* Gear and Equipment Styles */
+.sheet-layout-gear {
+    width: 825px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-layout-vehicles {
+    width: 825px;
+    border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-layout-ships {
+    width: 825px;
+	border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-layout-notes {
+    width: 825px;
+	border: 3px solid #002db3;
+	border-radius: 10px;
+	position: relative;
+	background-color: #9797a6;
+	font-family: Tahoma;
+	font-size: 14px;
+    }
+
+.sheet-notes1 {
+    width: 50%;
+    padding: 5px;
+    margin-left: 5px;
+    }
+
+.sheet-notes-top {
+    width: 387px;
+    height: 175px;
+    }
+
+.sheet-notes2 {
+    width: 50%;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    }
+
+.sheet-notes-gen {
+    width: 795px;
+    height: 175px;
+    margin: 10px;
+    margin-top: 0px;
+    }
