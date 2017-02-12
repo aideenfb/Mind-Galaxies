@@ -1,0 +1,871 @@
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Character Stats" checked="checked" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Psychic Powers" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="Equipment" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" title="Surface Craft" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab5" value="5" title="Space Craft" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab6" value="6" title="Notes" />
+
+<div class="sheet-tab-content sheet-tab1">
+
+
+<div class="sheet-main">
+	<div class="sheet-ch-info">
+		<img alt="Galaxies of the Mind" src="https://s3.amazonaws.com/files.d20.io/images/24988121/T5MsQ2Yh24nMqlbDjHmRZg/original.png?1478429496269" class="sheet-logo">
+		<table class="sheet-info-table" cellspacing="1px"><tbody>
+		    <tr><th>Player:</th><td><input class="sheet-info-block" type="text" name="attr_Player" value="@{player}" /></td>
+			    <th>Campaign:</th><td><input class="sheet-info-block" type="text" name="attr_Campaign" value="@{campaign}" /></td></tr>
+			<tr><th>Character:</th><td><input class="sheet-info-block" type="text" name="attr_character_name" value="@{character_name}" /></td>
+			    <th>Race:</th><td><input class="sheet-info-block" type="text" name="attr_Race" value="@{race}" /></td></tr>
+			<tr><th>Level:</th><td><input class="sheet-info-block" type="text" name="attr_Level" value="@{level}" /></td>
+			    <th>Height:</th><td><input class="sheet-info-block" type="text" name="attr_Height" value="@{height}" /></td></tr>
+			<tr><th>Occupation:</th><td><input class="sheet-info-block" type="text" name="attr_Occupation" value="@{occupation}" /></td>
+			    <th>Weight:</th><td><input class="sheet-info-block" type="text" name="attr_Weight" value="@{weight}" /></td></tr>
+			<tr><th>Homeworld:</th><td><input class="sheet-info-block" type="text" name="attr_Homeworld" value="@{homeworld}" /></td>
+			    <th>Age:</th><td><input class="sheet-info-block" type="text" name="attr_Age" value="@{age}" /></td></tr>
+		</tbody></table>
+	</div>
+	<div class="sheet-ch-attr">
+            <h3>Attributes</h3>
+            <table class="sheet-attr-table"><tbody>
+                <tr>
+                    <td class="sheet-c1">
+                        <button type="roll" name="roll_strSave" value="/me &{template:default}{{name=@{character_name} attempts a feat of Strength}}{{Successes=[[d100<[[@{Strength}+(?{Misc Modifiers?|0})]]]]}}"></button><input class="sheet-at-box" type="text" name="attr_Strength" value="25" /> Strength<br>
+                        <button type="roll" name="roll_agiSave" value="/me &{template:default}{{name=@{character_name} attempts a feat of Agility}}{{Successes=[[d100<[[@{Agility}+(?{Misc Modifiers?|0})]]]]}}"></button><input class="sheet-at-box" type="text" name="attr_Agility" value="25" /> Agility<br>
+                        <button type="roll" name="roll_tghSave" value="/me &{template:default}{{name=@{character_name} attempts a feat of Toughness}}{{Successes=[[d100<[[@{Toughness}+(?{Misc Modifiers?|0})]]]]}}"></button><input class="sheet-at-box" type="text" name="attr_Toughness" value="25" /> Toughness<br>
+                        <button type="roll" name="roll_intSave" value="/me &{template:default}{{name=@{character_name} attempts a feat of Intellect}}{{Successes=[[d100<[[@{Intellect}+(?{Misc Modifiers?|0})]]]]}}"></button><input class="sheet-at-box" type="text" name="attr_Intellect" value="25" /> Intellect<br>
+                        <button type="roll" name="roll_wilSave" value="/me &{template:default}{{name=@{character_name} attempts a feat of Will}}{{Successes=[[d100<[[@{Will}+(?{Misc Modifiers?|0})]]]]}}"></button><input class="sheet-at-box" type="text" name="attr_Will" value="25" /> Will
+                    </td>
+                    <td class="sheet-c2">
+                        <input class="sheet-at-box" type="text" name="attr_PK" value="25" /> Psycho-Kinesis<br>
+                        <input class="sheet-at-box" type="text" name="attr_Coercion" value="25" /> Coercion<br>
+                        <input class="sheet-at-box" type="text" name="attr_Farsense" value="25" /> Farsenses<br>
+                        <input class="sheet-at-box" type="text" name="attr_Redaction" value="25" /> Redaction<br>
+                        <input class="sheet-at-box" type="text" name="attr_Creativity" value="25" /> Creativity
+                    </td>
+                    <td class="sheet-c3">
+                        <select name="attr_pkActive" value="0"><option value="0" selected >Latent</option><option value="1">Sub-Operant</option><option value="2">Operant</option></select><br>
+                        <select name="attr_coActive" value="0"><option value="0" selected >Latent</option><option value="1">Sub-Operant</option><option value="2">Operant</option></select><br>
+                        <select name="attr_fsActive" value="0"><option value="0" selected >Latent</option><option value="1">Sub-Operant</option><option value="2">Operant</option></select><ve>
+                        <select name="attr_reActive" value="0"><option value="0" selected >Latent</option><option value="1">Sub-Operant</option><option value="2">Operant</option></select><ve>
+                        <select name="attr_crActive" value="0"><option value="0" selected >Latent</option><option value="1">Sub-Operant</option><option value="2">Operant</option></select>
+					</td>
+				</tr>
+			</tbody></table>
+	</div>
+	<div class="sheet-cp-attr">
+	    	<h3>Creative Potential</h3>
+		   	<table class="sheet-cp-table"><tbody>
+		    	<tr>
+			    	<td class="sheet-c1"> CP Modifier </td>
+			    	<td class="sheet-c2"><input class="sheet-at-box2" type="text" name="attr_cpMod" value="10"></td>
+			    </tr>
+			    <tr>
+			    	<td class="sheet-c1">Base CP </td>
+			    	<td class="sheet-c2"><input class="sheet-at-box2" type="text" name="attr_cpBase" value="[[@{Creativity}*@{cpMod}]]" disabled="true"></td>
+			    </tr>
+			    <tr>
+			    	<td class="sheet-c1">Cybernetics Adj. </td>
+			    	<td class="sheet-c2"><input class="sheet-at-box2" type="text" name="attr_cpCyber" value="0"></td>
+			    </tr>
+			    <tr>
+			    	<td class="sheet-c3" colspan="2">Current CP / Max CP</td>
+			    </tr>
+				<tr>
+					<td class="sheet-c3" colspan="2"><input class="sheet-at-box2" type="text" name="attr_CP" value="0"> / <input class="sheet-at-box2" type="text" name="attr_CP_max" value="[[@{cpBase}-@{cpCyber}]]" disabled="true"></td>
+				</tr>
+			</tbody></table>
+	</div>
+</div>
+<br>
+<div class="sheet-layout-box2">
+    <div class="sheet-movement-attr">
+        <h3>Movement</h3>
+        <table cellspacing="2" style="width: 190px;">
+            <tr><td>Base Movement:</td><td><input type="text" class="sheet-at-box" name="attr_moveBase" value="20" /></td></tr>
+            <tr><td>Agility Factor:</td><td><input type="text" class="sheet-at-box" name="attr_moveAgi" value="10" /></td></tr>
+            <tr><td>Armor Modifier:</td><td><input type="text" class="sheet-at-box" name="attr_moveArmor" value="0" /></td></tr>
+            <tr><td>Cybernetics Modifier:</td><td><input type="text" class="sheet-at-box" name="attr_moveCyber" value="0" /></td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr style="border: 1px solid #002db3"><td>Calculated Movement:</td><td><input type="text" class="sheet-at-box" name="attr_moveFinal" value="[[@{moveBase}+(2*(floor(@{Agility}/@{moveAgi})))+(@{moveArmor})+(@{moveCyber})]]" disabled="true" /></td></tr>
+        </table>
+    </div>
+    <div class="sheet-xp-attr">
+        <h3>Experience Progression</h3>
+        <table class="sheet-xp-table">
+            <tr>
+                <th class="sheet-h1">Current XP</th>
+                <th class="sheet-h1">XP Gained</th>
+                <th class="sheet-h1">Total XP</th>
+                <th class="sheet-h2">&nbsp;</th>
+                <th class="sheet-h1">Skill Points<br>(+2 per level)</th>
+                <th class="sheet-h1">Attribute Points<br>(+1d3 per level)</th>
+            </tr>
+            <tr>
+                <td class="sheet-c2"><input type="text" class="sheet-xp-block" name="attr_currentXP" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-xp-block" name="attr_gainedXP" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-xp-block" name="attr_totalXP" value="[[@{currentXP}+@{gainedXP}]]" disabled="true" /></td>
+                <th class="sheet-h2">&nbsp;</th>
+                <td class="sheet-c2">Gained <input type="text" class="sheet-at-box" name="attr_SPgained" /><br>Spent <input type="text" class="sheet-at-box" name="attr_SPspent" /></td>
+                <td class="sheet-c2">Gained <input type="text" class="sheet-at-box" name="attr_APgained" /><br>Spent <input type="text" class="sheet-at-box" name="attr_APspent" /></td>
+            </tr>
+        </table>
+        <br>
+        <h3>Meta-Psychic Resistances</h3>
+        <table class="sheet-resist-table"><tbody>
+            <tr>
+                <th class="sheet-h1">Psycho-Kinesis</th>
+                <th class="sheet-h1">Meta-Coercion</th>
+                <th class="sheet-h1">Farsensing</th>
+                <th class="sheet-h1">Meta-Redaction</th>
+                <th class="sheet-h1">Meta-Creativity</th>
+            </tr>
+            <tr>
+                <td class="sheet-c2"><button type="roll" name="roll_PKsave" value="/w gm &{template:default}{{name=@{character_name} attempts to resist a Kinetic Power}}{{Success if=[[d100]]<[[@{pkResist}+(?{Misc Modifier?|0})]]}}"></button><input type="text" class="sheet-at-box2" name="attr_pkResist" value="[[@{Strength}+((ceil(@{pkActive}/2))*(@{ck01}))]]" disabled="true" /></td>
+                <td class="sheet-c2"><button type="roll" name="roll_COsave" value="/w gm &{template:default}{{name=@{character_name} attempts to resist a Coercion Power}}{{Success if=[[d100]]<[[@{coResist}+(?{Misc Modifier?|0})]]}}"></button><input type="text" class="sheet-at-box2" name="attr_coResist" value="[[@{Will}+((ceil(@{coActive}/2))*(@{ck02}))]]" disabled="true" /></td>
+                <td class="sheet-c2"><button type="roll" name="roll_FSsave" value="/w gm &{template:default}{{name=@{character_name} attempts to resist a Farsensing Power}}{{Success ifes=[[d100]]<[[@{fsResist}+(?{Misc Modifier?|0})]]}}"></button><input type="text" class="sheet-at-box2" name="attr_fsResist" value="[[@{Agility}+((ceil(@{fsActive}/2))*(@{ck03}))]]" disabled="true" /></td>
+                <td class="sheet-c2"><button type="roll" name="roll_REsave" value="/w gm &{template:default}{{name=@{character_name} attempts to resist a Redaction Power}}{{Success if=[[d100]]<[[@{reResist}+(?{Misc Modifier?|0})]]}}"></button><input type="text" class="sheet-at-box2" name="attr_reResist" value="[[@{Intellect}+((ceil(@{reActive}/2))*(@{ck04}))]]" disabled="true" /></td>
+                <td class="sheet-c2"><button type="roll" name="roll_CRsave" value="/w gm &{template:default}{{name=@{character_name} attempts to resist a Creativity Power}}{{Success if=[[d100]]<[[@{crResist}+(?{Misc Modifier?|0})]]}}"></button><input type="text" class="sheet-at-box2" name="attr_crResist" value="[[@{Toughness}+((ceil(@{crActive}/2))*(@{ck05}))]]" disabled="true" /></td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+<br>
+<div class="sheet-layout-box">
+	<div class="sheet-skill-attr">
+	    <h3>Skills</h3>
+		<center>
+        <table class="sheet-skill-table"><tbody>
+            <tr>
+                <td>
+					<span class="sheet-sk-label">Meta-Psychic Skills</span><br>
+                    <input type="text" class="sheet-at-box" name="attr_sk01" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck01" value="[[(@{sk01}*5)+@{PK}]]" disabled="true">
+                    <button type="roll" name="roll_sk01" value="/me &{template:default}{{name=@{character_name} attempts a feat of Psycho-Kinetics}}{{Successes=[[d100<[[@{ck01}+(?{Misc Modifiers?|0})]]]]}}"></button> Psycho-Kinetics<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk02" value="0"> 
+    				<input type="text" class="sheet-at-box" name="attr_ck02" value="[[(@{sk02}*5)+@{Coercion}]]" disabled="true"> 
+    				<button type="roll" name="roll_sk02" value="/me &{template:default}{{name=@{character_name} attempts a feat of Meta-Coercion}}{{Successes=[[d100<[[@{ck02}+(?{Misc Modifiers?|0})]]]]}}"></button> Meta-Coercion<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk03" value="0"> 
+	    			<input type="text" class="sheet-at-box" name="attr_ck03" value="[[(@{sk03}*5)+@{Farsense}]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk03" value="/me &{template:default}{{name=@{character_name} attempts a feat of Far-Sensing}}{{Successes=[[d100<[[@{ck03}+(?{Misc Modifiers?|0})]]]]}}"></button> Far-Sensing<br>
+				    <input type="text" class="sheet-at-box" name="attr_sk04" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck04" value="[[(@{sk04}*5)+@{Redaction}]]" disabled="true"> 
+					<button type="roll" name="roll_sk04" value="/me &{template:default}{{name=@{character_name} attempts a feat of Meta-Redaction}}{{Successes=[[d100<[[@{ck04}+(?{Misc Modifiers?|0})]]]]}}"></button> Meta-Redaction<br>
+	    			<input type="text" class="sheet-at-box" name="attr_sk05" value="0"> 
+		    		<input type="text" class="sheet-at-box" name="attr_ck05" value="[[(@{sk05}*5)+@{Creativity}]]" disabled="true"> 
+			    	<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Meta-Creativity}}{{Successes=[[d100<[[@{ck05}+(?{Misc Modifiers?|0})]]]]}}"></button> Meta-Creativity<br>
+					<span class="sheet-sk-label">Combat Skills</span><br>
+					<input type="text" class="sheet-at-box" name="attr_sk06" value="0"> 
+    				<input type="text" class="sheet-at-box" name="attr_ck06" value="[[(@{sk06}*5)+(floor((@{Strength}+@{Toughness})/2))]]" disabled="true"> 
+	    			<button type="roll" name="roll_sk06" value="/me &{template:default}{{name=@{character_name} attempts a feat of Brawling}}{{Successes=[[d100<[[@{ck06}+(?{Misc Modifiers?|0})]]]]}}"></button> Brawling<br>
+			    	<input type="text" class="sheet-at-box" name="attr_sk07" value="0"> 
+				    <input type="text" class="sheet-at-box" type="number" name="attr_ck07" value="[[(@{sk07}*5)+(floor((@{Strength}+@{Agility})/2))]]" disabled="true"> 
+					<button type="roll" name="roll_sk07" value="/me &{template:default}{{name=@{character_name} attempts a feat of Melee}}{{Successes=[[d100<[[@{ck07}+(?{Misc Modifiers?|0})]]]]}}"></button> Melee<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk08" value="0"> 
+	    			<input type="text" class="sheet-at-box" type="number" name="attr_ck08" value="[[(@{sk08}*5)+(floor((@{Agility}+@{Farsense})/2))]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Firearms}}{{Successes=[[d100<[[@{ck08}+(?{Misc Modifiers?|0})]]]]}}"></button> Marksmanship<br>
+				    <input type="text" class="sheet-at-box" name="attr_sk09" value="0"> 
+					<input type="text" class="sheet-at-box" type="number" name="attr_ck09" value="[[(@{sk09}*5)+(@{moveArmor})+(@{moveCyber})+@{Agility}]]" disabled="true"> 
+					<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Evasion}}{{Successes=[[d100<[[@{ck09}+(?{Misc Modifiers?|0})]]]]}}"></button> Evasion<br>
+	    			<input type="text" class="sheet-at-box" name="attr_sk10" value="0"> 
+		    		<input type="text" class="sheet-at-box" type="number" name="attr_ck10" value="[[(@{sk10}*5)+(floor((@{Intellect}+@{Farsense})/2))]]" disabled="true"> 
+			    	<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Alertness}}{{Successes=[[d100<[[@{ck10}+(?{Misc Modifiers?|0})]]]]}}"></button> Alertness
+				</td>
+				<td>    
+					<span class="sheet-sk-label">Vehicle Skills</span><br>
+					<input type="text" class="sheet-at-box" name="attr_sk11" value="0"> 
+					<input type="text" class="sheet-at-box" type="number" name="attr_ck11" value="[[(@{sk11}*5)+(floor((@{Intellect}+@{Agility})/2))]]" disabled="true"> 
+    				<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Gunnery}}{{Successes=[[d100<[[@{ck11}+(?{Misc Modifiers?|0})]]]]}}"></button> Gunnery<br>
+		    		<input type="text" class="sheet-at-box" name="attr_sk12" value="0"> 
+			    	<input type="text" class="sheet-at-box" type="number" name="attr_ck12" value="[[(@{sk12}*5)+(floor((@{Intellect}+@{Farsense})/2))]]" disabled="true"> 
+				    <button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Driving}}{{Successes=[[d100<[[@{ck12}+(?{Misc Modifiers?|0})]]]]}}"></button> Driving<br>
+					<input type="text" class="sheet-at-box" name="attr_sk13" value="0"> 
+    				<input type="text" class="sheet-at-box" type="number" name="attr_ck13" value="[[(@{sk13}*5)+(floor((@{Intellect}+@{Farsense})/2))]]" disabled="true"> 
+	    			<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Meta-Creativity}}{{Successes=[[d100<[[@{ck13}+(?{Misc Modifiers?|0})]]]]}}"></button> Piloting<br>
+			    	<input type="text" class="sheet-at-box" name="attr_sk14" value="0"> 
+				    <input type="text" class="sheet-at-box" type="number" name="attr_ck14" value="[[(@{sk14}*5)+@{Intellect}]]" disabled="true"> 
+					<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Navigation}}{{Successes=[[d100<[[@{ck14}+(?{Misc Modifiers?|0})]]]]}}"></button> Navigation<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk15" value="0"> 
+	    			<input type="text" class="sheet-at-box" type="number" name="attr_ck15" value="[[(@{sk15}*5)+@{Intellect}]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk05" value="/me &{template:default}{{name=@{character_name} attempts a feat of Astrogation}}{{Successes=[[d100<[[@{ck15}+(?{Misc Modifiers?|0})]]]]}}"></button> Astrogation<br>
+					<span class="sheet-sk-label">General Skills</span><br>
+					<input type="text" class="sheet-at-box" name="attr_sk16" value="0"> 
+    				<input type="text" class="sheet-at-box" name="attr_ck16" value="[[(@{sk16}*5)+@{Will}]]" disabled="true"> 
+	    			<button type="roll" name="roll_sk16" value="/me &{template:default}{{name=@{character_name} attempts a feat of Animal Handling}}{{Successes=[[d100<[[@{ck16}+(?{Misc Modifiers?|0})]]]]}}"></button> Animal Handling<br>
+			    	<input type="text" class="sheet-at-box" name="attr_sk17" value="0"> 
+				    <input type="text" class="sheet-at-box" name="attr_ck17" value="[[(@{sk17}*5)+(floor((@{Strength}+@{Agility})/2))]]" disabled="true"> 
+					<button type="roll" name="roll_sk17" value="/me &{template:default}{{name=@{character_name} attempts a feat of Athletics}}{{Successes=[[d100<[[@{ck17}+(?{Misc Modifiers?|0})]]]]}}"></button> Athletics<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk18" value="0"> 
+	    			<input type="text" class="sheet-at-box" name="attr_ck18" value="[[(@{sk18}*5)+@{Intellect}]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk18" value="/me &{template:default}{{name=@{character_name} attempts a feat of Computer}}{{Successes=[[d100<[[@{ck18}+(?{Misc Modifiers?|0})]]]]}}"></button> Computers<br>
+				    <input type="text" class="sheet-at-box" name="attr_sk19" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck19" value="[[(@{sk19}*5)+(floor((@{Intellect}+@{Coercion})/2))]]" disabled="true"> 
+					<button type="roll" name="roll_sk19" value="/me &{template:default}{{name=@{character_name} attempts a feat of Diplomacy}}{{Successes=[[d100<[[@{ck19}+(?{Misc Modifiers?|0})]]]]}}"></button> Diplomacy<br>
+	    			<input type="text" class="sheet-at-box" name="attr_sk20" value="0"> 
+		    		<input type="text" class="sheet-at-box" name="attr_ck20" value="[[(@{sk20}*5)+(floor((@{Intellect}+@{Creativity})/2))]]" disabled="true"> 
+			    	<button type="roll" name="roll_sk20" value="/me &{template:default}{{name=@{character_name} attempts a feat of Disguise}}{{Successes=[[d100<[[@{ck20}+(?{Misc Modifiers?|0})]]]]}}"></button> Disguise
+				</td>
+				<td>
+					<input type="text" class="sheet-at-box" name="attr_sk21" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck21" value="[[(@{sk21}*5)+(floor((@{Intellect}+@{Creativity})/2))]]" disabled="true"> 
+    				<button type="roll" name="roll_sk21" value="/me &{template:default}{{name=@{character_name} attempts a feat of Engineering}}{{Successes=[[d100<[[@{ck21}+(?{Misc Modifiers?|0})]]]]}}"></button> Engineering<br>
+		    		<input type="text" class="sheet-at-box" name="attr_sk22" value="0"> 
+			    	<input type="text" class="sheet-at-box" name="attr_ck22" value="[[(@{sk22}*5)+(floor((@{Toughness}+@{Coercion})/2))]]" disabled="true"> 
+				    <button type="roll" name="roll_sk22" value="/me &{template:default}{{name=@{character_name} attempts a feat of Intimidation}}{{Successes=[[d100<[[@{ck22}+(?{Misc Modifiers?|0})]]]]}}"></button> Intimidation<br>
+					<input type="text" class="sheet-at-box" name="attr_sk23" value="0"> 
+    				<input type="text" class="sheet-at-box" name="attr_ck23" value="[[(@{sk23}*5)+(floor((@{Will}+@{Coercion})/2))]]" disabled="true"> 
+	    			<button type="roll" name="roll_sk23" value="/me &{template:default}{{name=@{character_name} attempts a feat of Leadership}}{{Successes=[[d100<[[@{ck23}+(?{Misc Modifiers?|0})]]]]}}"></button> Leadership<br>
+			    	<input type="text" class="sheet-at-box" name="attr_sk24" value="0"> 
+				    <input type="text" class="sheet-at-box" name="attr_ck24" value="[[(@{sk24}*5)+@{Intellect}]]" disabled="true"> 
+					<button type="roll" name="roll_sk24" value="/me &{template:default}{{name=@{character_name} attempts a feat of Mechanics}}{{Successes=[[d100<[[@{ck24}+(?{Misc Modifiers?|0})]]]]}}"></button> Mechanics<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk25" value="0"> 
+	    			<input type="text" class="sheet-at-box" name="attr_ck25" value="[[(@{sk25}*5)+@{Intellect}]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk25" value="/me &{template:default}{{name=@{character_name} attempts a feat of Medicine}}{{Successes=[[d100<[[@{ck25}+(?{Misc Modifiers?|0})]]]]}}"></button> Medicine<br>
+				    <input type="text" class="sheet-at-box" name="attr_sk26" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck26" value="[[(@{sk26}*5)+(floor((@{Will}+@{Farsense})/2))]]" disabled="true"> 
+					<button type="roll" name="roll_sk26" value="/me &{template:default}{{name=@{character_name} attempts a feat of Perception}}{{Successes=[[d100<[[@{ck26}+(?{Misc Modifiers?|0})]]]]}}"></button> Perception<br>
+	    			<input type="text" class="sheet-at-box" name="attr_sk27" value="0"> 
+		    		<input type="text" class="sheet-at-box" name="attr_ck27" value="[[(@{sk27}*5)+(floor((@{Intellect}+@{Farsense})/2))]]" disabled="true"> 
+			    	<button type="roll" name="roll_sk27" value="/me &{template:default}{{name=@{character_name} attempts a feat of Security Systems}}{{Successes=[[d100<[[@{ck27}+(?{Misc Modifiers?|0})]]]]}}"></button> Security Systems<br>
+					<input type="text" class="sheet-at-box" name="attr_sk28" value="0"> 
+					<input type="text" class="sheet-at-box" name="attr_ck28" value="[[(@{sk28}*5)+@{Agility}]]" disabled="true"> 
+    				<button type="roll" name="roll_sk28" value="/me &{template:default}{{name=@{character_name} attempts a feat of Stealth}}{{Successes=[[d100<[[@{ck28}+(?{Misc Modifiers?|0})]]]]}}"></button> Stealth<br>
+		    		<input type="text" class="sheet-at-box" name="attr_sk29" value="0"> 
+			    	<input type="text" class="sheet-at-box" name="attr_ck29" value="[[(@{sk29}*5)+@{Toughness}]]" disabled="true"> 
+				    <button type="roll" name="roll_sk29" value="/me &{template:default}{{name=@{character_name} attempts a feat of Streetwise}}{{Successes=[[d100<[[@{ck29}+(?{Misc Modifiers?|0})]]]]}}"></button> Streetwise<br>
+					<input type="text" class="sheet-at-box" name="attr_sk30" value="0"> 
+    				<input type="text" class="sheet-at-box" name="attr_ck30" value="[[(@{sk30}*5)+@{Will}]]" disabled="true"> 
+	    			<button type="roll" name="roll_sk30" value="/me &{template:default}{{name=@{character_name} attempts a feat of Survival}}{{Successes=[[d100<[[@{ck30}+(?{Misc Modifiers?|0})]]]]}}"></button> Survival<br>
+			    	<input type="text" class="sheet-at-box" name="attr_sk31" value="0"> 
+				    <input type="text" class="sheet-at-box" name="attr_ck31" value="[[(@{sk31}*5)+(floor((@{Intellect}+@{Creativity})/2))]]" disabled="true"> 
+					<button type="roll" name="roll_sk31" value="/me &{template:default}{{name=@{character_name} attempts a feat of Tactics}}{{Successes=[[d100<[[@{ck31}+(?{Misc Modifiers?|0})]]]]}}"></button> Tactics<br>
+    				<input type="text" class="sheet-at-box" name="attr_sk32" value="0"> 
+	    			<input type="text" class="sheet-at-box" name="attr_ck32" value="[[(@{sk32}*5)+@{Creativity}]]" disabled="true"> 
+		    		<button type="roll" name="roll_sk32" value="/me &{template:default}{{name=@{character_name} attempts a feat of Artistry}}{{Successes=[[d100<[[@{ck32}+(?{Misc Modifiers?|0})]]]]}}"></button> Artistry
+				</td>
+			</tr>
+		</tbody></table>
+		</center>
+	</div>
+</div>
+<br>
+<div class="sheet-layout-box3">
+    <div class="sheet-armor-attr">
+        <h3>Armor</h3>
+        <table class="sheet-armor-table"><tbody>
+            <tr><th>Natural Armor</th><th>Integrity</th><th>Charge</th><th>IRR</th><th>BRR</th><th>ERR</th><th>Wt.</th></tr>
+            <tr>
+                <td class="sheet-c3"><input type="text" class="sheet-armor-block" name="attr_NatArmorType" value="None" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_NatArmorInt" value="0" />/<input type="text" class="sheet-at-box3" name="attr_NatArmorInt_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_NatArmorChg" value="0" />/<input type="text" class="sheet-at-box3" name="attr_NatArmorChg_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_NatArmorIRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_NatArmorBRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_NatArmorERR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_NatArmorWt" value="0" /></td>
+            </tr>
+            <tr><th>Armor Worn</th><th>Integrity</th><th>Charge</th><th>IRR</th><th>BRR</th><th>ERR</th><th>Wt.</th></tr>
+            <tr>
+                <td class="sheet-c3"><input type="text" class="sheet-armor-block" name="attr_ArmorType" value="None" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_ArmorInt" value="0" />/<input type="text" class="sheet-at-box3" name="attr_ArmorInt_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_ArmorChg" value="0" />/<input type="text" class="sheet-at-box3" name="attr_ArmorChg_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ArmorIRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ArmorBRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ArmorERR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ArmorWt" value="0" /></td>
+            </tr>
+            <tr><th>Shield Used</th><th>Integrity</th><th>Charge</th><th>IRR</th><th>BRR</th><th>ERR</th><th>Wt.</th></tr>
+            <tr>
+                <td class="sheet-c3"><input type="text" class="sheet-armor-block" name="attr_ShieldType" value="None" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_ShieldInt" value="0" />/<input type="text" class="sheet-at-box3" name="attr_ShieldInt_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box3" name="attr_ShieldChg" value="0" />/<input type="text" class="sheet-at-box3" name="attr_ShieldChg_max" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ShieldIRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ShieldBRR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ShieldERR" value="0" /></td>
+                <td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_ShieldWt" value="0" /></td>
+            </tr>
+        </tbody></table>
+        <h3>Active Psychic Defenses</h3>
+        <table class="sheet-armor-table"><tbody>
+            <tr><th colspan="3">Meta-Psychic Shielding</th><td class="sheet-c4">&nbsp;</td><th colspan="2">Mechanical Shielding</th></tr>
+            <tr><td class="sheet-c3">Kinetic Shields</td>
+                <td class="sheet-c1">CP Cost&nbsp;</td>
+                <td class="sheet-c3"><input type="text" class="sheet-at-box3" name="attr_KinShieldCP" /></td>
+                <td class="sheet-c4">&nbsp;</td>
+                <td class="sheet-c1">Device:&nbsp;</td>
+                <td class="sheet-c3"><input type="text" class="sheet-armor-block" name="attr_StemType" /></td>
+            </tr>
+            <tr>
+                <td class="sheet-c1">IRR/BRR</td>
+                <td class="sheet-c1"><input type="text" class="sheet-at-box3" name="attr_KinIRR" /> </td>
+                <td class="sheet-c3">&nbsp;/ <input type="text" class="sheet-at-box3" name="attr_KinBRR" /></td>
+                <td class="sheet-c4">&nbsp;</td>
+                <td class="sheet-c2" colspan="2">CP Shield Value: <input type="text" class="sheet-at-box" name="attr_StemPower" /> / <input type="text" class="sheet-at-box" name="attr_StemPower_max" /></td>
+            </tr>
+            <tr><td class="sheet-c3">Creativity Shields</td>
+                <td class="sheet-c1">CP Cost&nbsp;</td>
+                <td class="sheet-c3"><input type="text" class="sheet-at-box3" name="attr_CreShieldCP" /></td>
+                <td class="sheet-c4">&nbsp;</td>
+                <td class="sheet-c2" colspan="2" rowspan="2">Mechanical CP shields<br>block wearer's MP powers.</td>
+            </tr>
+            <tr>
+                <td class="sheet-c1">ERR</td>
+                <td class="sheet-c1"><input type="text" class="sheet-at-box3" name="attr_CreERR" /></td>
+            </tr>
+        </tbody></table>
+    </div>
+    <div class="sheet-hp-attr">
+		<h3>Health</h3>
+		<table class="sheet-hp-table"><tbody>
+		    <tr><td class="sheet-c1" colspan="2" >Base Health </td><td class="sheet-c3"><input type="number" class="sheet-at-box2" name="attr_Health" value="50" /></td></tr>
+		    <tr><td class="sheet-c1" colspan="2" >Max Health </td><td class="sheet-c3"><input type="number" class="sheet-at-box2" name="attr_Health_max" value="[[@{Toughness}*2]]" disabled="true" /></td></tr>
+		    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+		    <tr><th colspan="3">Location Damage</th></tr>
+		    <tr><td colspan="3">&nbsp;</td></tr>
+		    <tr><td class="sheet-c1">Head</td><td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_dmgHead" value="0" /></td><td></td></tr>
+		    <tr><td></td><td class="sheet-c2"><input type="text" class="sheet-at-box" name="attr_dmgHead_max" value="[[(floor(@{Health_max}*0.1))]]" disabled="true" /></td><td></td></tr>
+		    <tr><td class="sheet-c1">Right<input type="text" class="sheet-at-box" name="attr_dmgLA" value="0" /></td><td></td><td><input type="text" class="sheet-at-box" name="attr_dmgRA" value="0" />Right</td></tr>
+		    <tr><td class="sheet-c1">Arm<input type="text" class="sheet-at-box" name="attr_dmgLA_max" value="[[(floor(@{Health_max}*0.15))]]" disabled="true" /></td><td></td><td class="sheet-c3"><input type="text" class="sheet-at-box" name="attr_dmgRL_max" value="[[(floor(@{Health_max}*0.15))]]" disabled="true" />Arm</td></tr>
+		    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+		    <tr><td class="sheet-c1">Left<input type="text" class="sheet-at-box" name="attr_dmgLL" value="0" /></td><td></td><td class="sheet-c3"><input type="text" class="sheet-at-box" name="attr_dmgRL" value="0" />Right</td></tr>
+		    <tr><td class="sheet-c1">Leg<input type="text" class="sheet-at-box" name="attr_dmgLL_max" value="[[(floor(@{Health_max}*0.20))]]" disabled="true" /></td><td></td><td class="sheet-c3"><input type="text" class="sheet-at-box" name="attr_dmgRL_max" value="[[(floor(@{Health_max}*0.20))]]" disabled="true" />Leg</td></tr>
+		    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+		</tbody></table>
+	</div>
+</div>
+<br>
+<div class="sheet-layout-box4">
+    <div class="sheet-weapons-attr">
+        <h3>Weapons</h3>
+        <table class="sheet-repweapon-table">
+            <tr>
+                <th>Brawling Attacks</th>
+                <th>Acc.</th>
+                <th>Spec.<br>Level</th>
+                <th>Crit<br>%</th>
+                <th>Speed</th>
+                <th>Init.</th>
+                <th>Damage</th>
+                <th>Type</th>
+                <th>Attack<br>Roll</th>
+                <th>Range<br>S/M/L/E</th>
+            </tr>
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameBr" value="Maneuver"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionBr" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specBr" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critBr" disabled="true" value="[[(ceil(@{sk06}/2))]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedBr" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initMe" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameBr}!}}{{Initiative = [[d20+@{speedBr}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgBr" value="0" /></td>
+                <td class="c2"><select name="attr_typeBr" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkBrawl" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameBr}=[[d100cs<@{critBr}cf>99<[[@{ck06}-(floor(@{target|ck09}/5))+@{precisionBr}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgBr}+@{sk06}]]}}{{Type=@{typeBr}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngBr" value="0" /></td>
+                </tr>
+        </table>
+            <fieldset class="repeating_wpns-brawl" name="attr_repWeaponsBr">
+        <table class="sheet-repweapon-table">
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameBr1" value="Maneuver"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionBr1" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specBr1" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critBr1" disabled="true" value="[[(ceil(@{sk06}/2))]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedBr1" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initBr1" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameBr1}!}}{{Initiative = [[d20+@{speedBr1}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgBr1" value="0" /></td>
+                <td class="c2"><select name="attr_typeBr1" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkBrawl1" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameBr1}=[[d100cs<@{critBr1}cf>99<[[@{ck06}-(floor(@{target|ck09}/5))+@{precisionBr1}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgBr1}+@{sk06}]]}}{{Type=@{typeBr1}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngBr1" value="0" /></td>
+                </tr>
+        </table>
+            </fieldset>
+        <br>
+        <table class="sheet-repweapon-table">
+            <tr>
+                <th>Melee Weapons</th>
+                <th>Acc.</th>
+                <th>Spec.<br>Level</th>
+                <th>Crit<br>%</th>
+                <th>Speed</th>
+                <th>Init.</th>
+                <th>Damage</th>
+                <th>Type</th>
+                <th>Attack<br>Roll</th>
+                <th>Range<br>S/M/L/E</th>
+            </tr>
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameMe" value="Weapon"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionMe" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specMe" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critMe" disabled="true" value="[[(ceil(@{sk07}/2))+((ceil(@{sk07}/2))*@{specMe})]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedMe" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initMe" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameMe}!}}{{Initiative = [[d20+@{speedMe}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgMe" value="0" /></td>
+                <td class="c2"><select name="attr_typeMe" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkMelee" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameMe}=[[d100cs<@{critMe}cf>99<[[@{ck07}-(floor(@{target|ck09}/5))+@{precisionMe}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgMe}+@{sk07}]]}}{{Type=@{typeMe}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngMe" value="0" /></td>
+                </tr>
+        </table>
+            <fieldset class="repeating_wpns-melee" name="attr_repWeaponsMe">
+        <table class="sheet-repweapon-table">
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameMe1" value="Weapon"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionMe1" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specMe1" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critMe1" disabled="true" value="[[(ceil(@{sk07}/2))+((ceil(@{sk07}/2))*@{specMe1})]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedMe1" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initMe1" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameMe1}!}}{{Initiative = [[d20+@{speedMe1}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgMe1" value="0" /></td>
+                <td class="c2"><select name="attr_typeMe1" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkMelee1" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameMe1}=[[d100cs<@{critMe1}cf>99<[[@{ck07}-(floor(@{target|ck09}/5))+@{precisionMe1}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgMe1}+@{sk07}]]}}{{Type=@{typeMe1}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngMe1" value="0" /></td>
+                </tr>
+        </table>
+            </fieldset>
+        <br>
+        <table class="sheet-repweapon-table">
+            <tr>
+                <th>Ramged Weapons</th>
+                <th>Acc.</th>
+                <th>Spec.<br>Level</th>
+                <th>Crit<br>%</th>
+                <th>Speed</th>
+                <th>Init.</th>
+                <th>Damage</th>
+                <th>Type</th>
+                <th>Attack<br>Roll</th>
+                <th>Range<br>S/M/L/E</th>
+            </tr>
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameRa" value="Weapon"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionRa" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specRa" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critRa" disabled="true" value="[[(ceil(@{sk08}/2))]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedRa" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initMe" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameRa}!}}{{Initiative = [[d20+@{speedRa}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgRa" value="0" /></td>
+                <td class="c2"><select name="attr_typeRa" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkRanged" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameRa}=[[d100cs<@{critRa}cf>99<[[@{ck08}-(floor(@{target|ck09}/5))+@{precisionRa}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgRa}]]}}{{Type=@{typeRa}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngRa" value="0" /></td>
+                </tr>
+        </table>
+            <fieldset class="repeating_wpns-ranged" name="attr_repWeaponsRa">
+        <table class="sheet-repweapon-table">
+            <tr>
+                <td class="c4"><input type="text" class="sheet-info-block" name="attr_wpnNameRa1" value="Weapon"/></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_precisionRa1" value="0"/></td>
+                <td class="c2"><input type="number" class="sheet-at-box2" min="0" max="4" name="attr_specRa1" value="0" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_critRa1" disabled="true" value="[[(ceil(@{sk08}/2))]]" /></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_speedRa1" value="0" /></td>
+                <td class="c2"><button type="roll" name="roll_initRa1" value="/w gm &{template:default}{{name=@{character_name} attempts an attack with @{wpnNameRa1}!}}{{Initiative = [[d20+@{speedRa1}-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                <td class="c2"><input type="text" class="sheet-at-box2" name="attr_dmgRa1" value="0" /></td>
+                <td class="c2"><select name="attr_typeRa1" value="Impact"><option value="Impact" selected>Impact</option><option vlaue="Ballistic">Ballistic</option><option value="Energy">Energy</option><option value="Psychic">Psychic</option></select></td>
+                <td class="c2"><button type="roll" name="roll_atkRanged1" value="/me &{template:default}{{name=@{character_name} attacks @{target|token_name}!}}{{@{wpnNameRa1}=[[d100cs<@{critRa1}cf>99<[[@{ck08}-(floor(@{target|ck09}/5))+@{precisionRa1}+(?{Misc. Adjustments|0})]]]] Hits}}{{Damage=[[@{dmgRa1}]]}}{{Type=@{typeRa1}}}">Atk</button></td>
+                <td class="c2"><input type="text" class="sheet-info-block" name="attr_rngRa1" value="0" /></td>
+                </tr>
+        </table>
+            </fieldset>
+    </div>
+</div>
+
+</div>
+
+<div class="sheet-tab-content sheet-tab2">
+    <h3>Meta-Psychic Powers</h3>
+    <center><span class="sheet-sk-label">Telepathic Range</span><input type="text" class="sheet-at-box3" name="attr_PathRad" /> <button type="roll" name="btn_opPath" value="/me has a Telepathic Range of [[(floor(@{Farsense}*({(.5*@{pkActive}),(.5*@{coActive}),(.5*@{fsActive}),(.5*@{reActive}),(.5*@{crActive})}kh1)))*{1,(5*@{fsActive})}kh1]] meters">Operant Path</button> <button type="roll" name="btn_nonopPath" value="/me had a telepathic range of [[(floor(.5*@{fsActive}*@{Farsense}))]] meters">Non-Operant Path</button></center><br>
+    <input type="radio" name="attr_pwrtab" class="sheet-pwrtab sheet-pwrtab1" value="1" title="Psycho-Kinetics" checked="checked" />
+    <input type="radio" name="attr_pwrtab" class="sheet-pwrtab sheet-pwrtab2" value="2" title="Meta-Coercion" />
+    <input type="radio" name="attr_pwrtab" class="sheet-pwrtab sheet-pwrtab3" value="3" title="Farsensing" />
+    <input type="radio" name="attr_pwrtab" class="sheet-pwrtab sheet-pwrtab4" value="4" title="Meta-Redaction" />
+    <input type="radio" name="attr_pwrtab" class="sheet-pwrtab sheet-pwrtab5" value="5" title="Meta-Creativity" />
+    <br>
+
+    <div class="sheet-pwrtab-content sheet-pwrtab1">
+        <fieldset class="repeating_pk-power" name="attr_repPKpwr">
+            <div class="sheet-layout-powers">
+            <table class="sheet-pwr-table">
+                <tr>
+                    <td class="sheet-c2">Power Name </td>
+                    <td class="sheet-c2">Base CP /</td>
+                    <td class="sheet-c2">Adj. CP </td>
+                    <td class="sheet-c2">Range</td>
+                    <td class="sheet-c2">Area</td>
+                    <td class="sheet-c2">Maintained?</td>
+                    <td class="sheet-c2" rowspan="2"><button type="roll" name="roll_initPk" value="/w gm &{template:default}{{name=@{character_name} attempts to use @{PKpwr}!}}{{Initiative = [[d20+5-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                </tr>
+                <tr>
+                    <td class="sheet-c3"><input type="text" name="attr_PKpwr" class="sheet-info-block" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_PKbaseCP" class="sheet-pwr-box" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_PKadjCP" class="sheet-pwr-box" value="[[(ceil(@{PKbaseCP}/@{sk01}))]]" disabled="true" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_PKrange" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_PKarea" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><select name="attr_PKmaint"><option value="0">No</option><option value="1">Yes</option></select></td>
+                </tr>
+            </table>
+                <input type="checkbox" name="attr_chk1" class="sheet-chk sheet-chk1" title="Description" />
+                <input type="checkbox" name="attr_chk2" class="sheet-chk sheet-chk2" title="Defensive" />
+                <input type="checkbox" name="attr_chk3" class="sheet-chk sheet-chk3" title="Offensive" />
+                <input type="checkbox" name="attr_chk4" class="sheet-chk sheet-chk4" title="Resisted" />
+                <input type="checkbox" name="attr_chk5" class="sheet-chk sheet-chk5" title="Active" />
+            
+                <div class="sheet-chk-content sheet-chk1">
+                    <textarea class="sheet-pwr-desc" name="attr_PKdesc"></textarea>
+                </div>
+                <div class="sheet-chk-content sheet-chk2">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Base Cp per point<br>of damage absorbed</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKresist" class="sheet-pwr-box" value="0" /></td>
+                            <td class="sheet-c1">Adjusted<br>CP cost</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKresistAdj" class="sheet-pwr-box" value="[[(ceil(@{PKresist}/@{sk01}))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Type of Damage<br>Resistance</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKdmg" class="sheet-pwr-box3" value="Type" /></td>
+                            <td class="sheet-c1">Max Resistance<br>Rating</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKrr" class="sheet-pwr-box2" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-chk-content sheet-chk3">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Damage</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKatk" class="sheet-pwr-box3" value="0" /></td>
+                            <td class="sheet-c1">Damage<br>Type</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKatkType" class="sheet-pwr-box3" value="Impact" /></td>
+                            <td class="sheet-c1">Short<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKrangeS" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.25))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Medium<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKrangeM" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.5))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Long<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKrangeL" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.75))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Extreme<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_PKrangeE" class="sheet-pwr-box" value="[[(floor(@{pathrad}*1))]]" disabled="true" /></td>
+                            <td class="sheet-c2"><button type="roll" name="roll_repPKatk" value="&{template:default}{{name=@{character_name} uses @{PKpwr} on @{target|token_name}}}{{Success if=[[d100]]&#8804;[[@{ck01}+?{Misc Adjustment|0}]]}}{{Damage=[[@{PKatk}]]}}{{Type=@{PKatkType}}}{{CP Cost=?{Range Category?|Short,[[@{PKadjCP}]]|Medium,[[(ceil(1.25*@{PKadjCP}))]]|Long,[[(ceil(1.5*@{PKadjCP}))]]|Extreme,[[2*@{PKadjCP}]]}}}"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    
+    <div class="sheet-pwrtab-content sheet-pwrtab2">
+        <fieldset class="repeating_co-power" name="attr_repCOpwr">
+            <div class="sheet-layout-powers">
+            <table class="sheet-pwr-table">
+                <tr>
+                    <td class="sheet-c2">Power Name </td>
+                    <td class="sheet-c2">Base CP /</td>
+                    <td class="sheet-c2">Adj. CP </td>
+                    <td class="sheet-c2">Range</td>
+                    <td class="sheet-c2">Area</td>
+                    <td class="sheet-c2">Maintained?</td>
+                    <td class="sheet-c2" rowspan="2"><button type="roll" name="roll_initCo" value="/w gm &{template:default}{{name=@{character_name} attempts to use @{COpwr}!}}{{Initiative = [[d20+5-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                </tr>
+                <tr>
+                    <td class="sheet-c3"><input type="text" name="attr_COpwr" class="sheet-info-block" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_CObaseCP" class="sheet-pwr-box" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_COadjCP" class="sheet-pwr-box" value="[[(ceil(@{CObaseCP}/@{sk02}))]]" disabled="true" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_COrange" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_COarea" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><select name="attr_COmaint"><option value="0">No</option><option value="1">Yes</option></select></td>
+                </tr>
+            </table>
+                <input type="checkbox" name="attr_chk1" class="sheet-chk sheet-chk1" title="Description" />
+                <input type="checkbox" name="attr_chk2" class="sheet-chk sheet-chk2" title="Defensive" />
+                <input type="checkbox" name="attr_chk3" class="sheet-chk sheet-chk3" title="Offensive" />
+                <input type="checkbox" name="attr_chk4" class="sheet-chk sheet-chk4" title="Resisted" />
+                <input type="checkbox" name="attr_chk5" class="sheet-chk sheet-chk5" title="Active" />
+            
+                <div class="sheet-chk-content sheet-chk1">
+                    <textarea class="sheet-pwr-desc" name="attr_COdesc"></textarea>
+                </div>
+                <div class="sheet-chk-content sheet-chk2">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Base Cp per point<br>of damage absorbed</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COresist" class="sheet-pwr-box" value="0" /></td>
+                            <td class="sheet-c1">Adjusted<br>CP cost</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COresistAdj" class="sheet-pwr-box" value="[[(ceil(@{COresist}/@{sk02}))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Type of Damage<br>Resistance</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COdmg" class="sheet-pwr-box3" value="Type" /></td>
+                            <td class="sheet-c1">Max Resistance<br>Rating</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COrr" class="sheet-pwr-box2" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-chk-content sheet-chk3">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Damage</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COatk" class="sheet-pwr-box3" value="0" /></td>
+                            <td class="sheet-c1">Damage<br>Type</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COatkType" class="sheet-pwr-box3" value="Psychic" /></td>
+                            <td class="sheet-c1">Short<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COrangeS" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.25))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Medium<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COrangeM" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.5))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Long<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COrangeL" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.75))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Extreme<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_COrangeE" class="sheet-pwr-box" value="[[(floor(@{pathrad}*1))]]" disabled="true" /></td>
+                            <td class="sheet-c2"><button type="roll" name="roll_repCOatk" value="&{template:default}{{name=@{character_name} uses @{COpwr} on @{target|token_name}}}{{Success if=[[d100]]&#8804;[[@{ck02}+?{Misc Adjustment|0}]]}}{{Damage=[[@{COatk}]]}}{{Type=@{COatkType}}}{{CP Cost=?{Range Category?|Short,[[@{COadjCP}]]|Medium,[[(ceil(1.25*@{COadjCP}))]]|Long,[[(ceil(1.5*@{COadjCP}))]]|Extreme,[[2*@{COadjCP}]]}}}"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="sheet-pwrtab-content sheet-pwrtab3">
+        <fieldset class="repeating_fs-power" name="attr_repFSpwr">
+            <div class="sheet-layout-powers">
+            <table class="sheet-pwr-table">
+                <tr>
+                    <td class="sheet-c2">Power Name </td>
+                    <td class="sheet-c2">Base CP /</td>
+                    <td class="sheet-c2">Adj. CP </td>
+                    <td class="sheet-c2">Range</td>
+                    <td class="sheet-c2">Area</td>
+                    <td class="sheet-c2">Maintained?</td>
+                    <td class="sheet-c2" rowspan="2"><button type="roll" name="roll_initFS" value="/w gm &{template:default}{{name=@{character_name} attempts to use @{FSpwr}!}}{{Initiative = [[d20+5-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                </tr>
+                <tr>
+                    <td class="sheet-c3"><input type="text" name="attr_FSpwr" class="sheet-info-block" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_FSbaseCP" class="sheet-pwr-box" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_FSadjCP" class="sheet-pwr-box" value="[[(ceil(@{FSbaseCP}/@{sk03}))]]" disabled="true" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_FSrange" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_FSarea" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><select name="attr_FSmaint"><option value="0">No</option><option value="1">Yes</option></select></td>
+                </tr>
+            </table>
+                <input type="checkbox" name="attr_chk1" class="sheet-chk sheet-chk1" title="Description" />
+                <input type="checkbox" name="attr_chk2" class="sheet-chk sheet-chk2" title="Defensive" />
+                <input type="checkbox" name="attr_chk3" class="sheet-chk sheet-chk3" title="Offensive" />
+                <input type="checkbox" name="attr_chk4" class="sheet-chk sheet-chk4" title="Resisted" />
+                <input type="checkbox" name="attr_chk5" class="sheet-chk sheet-chk5" title="Active" />
+            
+                <div class="sheet-chk-content sheet-chk1">
+                    <textarea class="sheet-pwr-desc" name="attr_COdesc"></textarea>
+                </div>
+                <div class="sheet-chk-content sheet-chk2">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Base Cp per point<br>of damage absorbed</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSresist" class="sheet-pwr-box" value="0" /></td>
+                            <td class="sheet-c1">Adjusted<br>CP cost</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSresistAdj" class="sheet-pwr-box" value="[[(ceil(@{FSresist}/@{sk03}))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Type of Damage<br>Resistance</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSdmg" class="sheet-pwr-box3" value="Type" /></td>
+                            <td class="sheet-c1">Max Resistance<br>Rating</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSrr" class="sheet-pwr-box2" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-chk-content sheet-chk3">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Damage</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSatk" class="sheet-pwr-box3" value="0" /></td>
+                            <td class="sheet-c1">Damage<br>Type</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSatkType" class="sheet-pwr-box3" value="Psychic" /></td>
+                            <td class="sheet-c1">Short<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSrangeS" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.25))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Medium<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSrangeM" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.5))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Long<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSrangeL" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.75))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Extreme<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_FSrangeE" class="sheet-pwr-box" value="[[(floor(@{pathrad}*1))]]" disabled="true" /></td>
+                            <td class="sheet-c2"><button type="roll" name="roll_repFSatk" value="&{template:default}{{name=@{character_name} uses @{FSpwr} on @{target|token_name}}}{{Success if=[[d100]]&#8804;[[@{ck03}+?{Misc Adjustment|0}]]}}{{Damage=[[@{FSatk}]]}}{{Type=@{FSatkType}}}{{CP Cost=?{Range Category?|Short,[[@{FSadjCP}]]|Medium,[[(ceil(1.25*@{FSadjCP}))]]|Long,[[(ceil(1.5*@{FSadjCP}))]]|Extreme,[[2*@{FSadjCP}]]}}}"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="sheet-pwrtab-content sheet-pwrtab4">
+        <fieldset class="repeating_re-power" name="attr_repREpwr">
+            <div class="sheet-layout-powers">
+            <table class="sheet-pwr-table">
+                <tr>
+                    <td class="sheet-c2">Power Name </td>
+                    <td class="sheet-c2">Base CP /</td>
+                    <td class="sheet-c2">Adj. CP </td>
+                    <td class="sheet-c2">Range</td>
+                    <td class="sheet-c2">Area</td>
+                    <td class="sheet-c2">Maintained?</td>
+                    <td class="sheet-c2" rowspan="2"><button type="roll" name="roll_initRe" value="/w gm &{template:default}{{name=@{character_name} attempts to use @{REpwr}!}}{{Initiative = [[d20+5-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                </tr>
+                <tr>
+                    <td class="sheet-c3"><input type="text" name="attr_REpwr" class="sheet-info-block" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_REbaseCP" class="sheet-pwr-box" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_REadjCP" class="sheet-pwr-box" value="[[(ceil(@{REbaseCP}/@{sk04}))]]" disabled="true" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_RErange" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_REarea" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><select name="attr_REmaint"><option value="0">No</option><option value="1">Yes</option></select></td>
+                </tr>
+            </table>
+                <input type="checkbox" name="attr_chk1" class="sheet-chk sheet-chk1" title="Description" />
+                <input type="checkbox" name="attr_chk2" class="sheet-chk sheet-chk2" title="Defensive" />
+                <input type="checkbox" name="attr_chk3" class="sheet-chk sheet-chk3" title="Offensive" />
+                <input type="checkbox" name="attr_chk4" class="sheet-chk sheet-chk4" title="Resisted" />
+                <input type="checkbox" name="attr_chk5" class="sheet-chk sheet-chk5" title="Active" />
+            
+                <div class="sheet-chk-content sheet-chk1">
+                    <textarea class="sheet-pwr-desc" name="attr_REdesc"></textarea>
+                </div>
+                <div class="sheet-chk-content sheet-chk2">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Base Cp per point<br>of damage absorbed</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_REresist" class="sheet-pwr-box" value="0" /></td>
+                            <td class="sheet-c1">Adjusted<br>CP cost</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_REresistAdj" class="sheet-pwr-box" value="[[(ceil(@{COresist}/@{sk04}))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Type of Damage<br>Resistance</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_REdmg" class="sheet-pwr-box3" value="Type" /></td>
+                            <td class="sheet-c1">Max Resistance<br>Rating</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_RErr" class="sheet-pwr-box2" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-chk-content sheet-chk3">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Damage</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_REatk" class="sheet-pwr-box3" value="0" /></td>
+                            <td class="sheet-c1">Damage<br>Type</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_REatkType" class="sheet-pwr-box3" value="Psychic" /></td>
+                            <td class="sheet-c1">Short<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_RErangeS" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.25))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Medium<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_RErangeM" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.5))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Long<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_RErangeL" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.75))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Extreme<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_RErangeE" class="sheet-pwr-box" value="[[(floor(@{pathrad}*1))]]" disabled="true" /></td>
+                            <td class="sheet-c2"><button type="roll" name="roll_repRESatk" value="&{template:default}{{name=@{character_name} uses @{REpwr} on @{target|token_name}}}{{Success if=[[d100]]&#8804;[[@{ck04}+?{Misc Adjustment|0}]]}}{{Damage=[[@{REatk}]]}}{{Type=@{REatkType}}}{{CP Cost=?{Range Category?|Short,[[@{REadjCP}]]|Medium,[[(ceil(1.25*@{REadjCP}))]]|Long,[[(ceil(1.5*@{REadjCP}))]]|Extreme,[[2*@{REadjCP}]]}}}"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="sheet-pwrtab-content sheet-pwrtab5">
+        <fieldset class="repeating_cr-power" name="attr_repCRpwr">
+            <div class="sheet-layout-powers">
+            <table class="sheet-pwr-table">
+                <tr>
+                    <td class="sheet-c2">Power Name </td>
+                    <td class="sheet-c2">Base CP /</td>
+                    <td class="sheet-c2">Adj. CP </td>
+                    <td class="sheet-c2">Range</td>
+                    <td class="sheet-c2">Area</td>
+                    <td class="sheet-c2">Maintained?</td>
+                    <td class="sheet-c2" rowspan="2"><button type="roll" name="roll_initCr" value="/w gm &{template:default}{{name=@{character_name} attempts to use @{CRpwr}!}}{{Initiative = [[d20+5-(floor(@{ck10}/5))&{tracker}]]}}">Init</button></td>
+                </tr>
+                <tr>
+                    <td class="sheet-c3"><input type="text" name="attr_CRpwr" class="sheet-info-block" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_CRbaseCP" class="sheet-pwr-box" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_CRadjCP" class="sheet-pwr-box" value="[[(ceil(@{CRbaseCP}/@{sk05}))]]" disabled="true" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_CRrange" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><input type="text" name="attr_CRarea" class="sheet-pwr-box2" value="0" /></td>
+                    <td class="sheet-c2"><select name="attr_CRmaint"><option value="0">No</option><option value="1">Yes</option></select></td>
+                </tr>
+            </table>
+                <input type="checkbox" name="attr_chk1" class="sheet-chk sheet-chk1" title="Description" />
+                <input type="checkbox" name="attr_chk2" class="sheet-chk sheet-chk2" title="Defensive" />
+                <input type="checkbox" name="attr_chk3" class="sheet-chk sheet-chk3" title="Offensive" />
+                <input type="checkbox" name="attr_chk4" class="sheet-chk sheet-chk4" title="Resisted" />
+                <input type="checkbox" name="attr_chk5" class="sheet-chk sheet-chk5" title="Active" />
+            
+                <div class="sheet-chk-content sheet-chk1">
+                    <textarea class="sheet-pwr-desc" name="attr_CRdesc"></textarea>
+                </div>
+                <div class="sheet-chk-content sheet-chk2">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Base Cp per point<br>of damage absorbed</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CPresist" class="sheet-pwr-box" value="0" /></td>
+                            <td class="sheet-c1">Adjusted<br>CP cost</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CPresistAdj" class="sheet-pwr-box" value="[[(ceil(@{CPresist}/@{sk05}))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Type of Damage<br>Resistance</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CPdmg" class="sheet-pwr-box3" value="Type" /></td>
+                            <td class="sheet-c1">Max Resistance<br>Rating</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CPrr" class="sheet-pwr-box2" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sheet-chk-content sheet-chk3">
+                    <table class="sheet-pwr-table">
+                        <tr>
+                            <td class="sheet-c1">Damage</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRatk" class="sheet-pwr-box3" value="0" /></td>
+                            <td class="sheet-c1">Damage<br>Type</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRatkType" class="sheet-pwr-box3" value="Energy" /></td>
+                            <td class="sheet-c1">Short<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRrangeS" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.25))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Medium<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRrangeM" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.5))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Long<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRrangeL" class="sheet-pwr-box" value="[[(floor(@{pathrad}*.75))]]" disabled="true" /></td>
+                            <td class="sheet-c1">Extreme<br>Range</td>
+                            <td class="sheet-c3">&nbsp;&nbsp;<input type="text" name="attr_CRrangeE" class="sheet-pwr-box" value="[[(floor(@{pathrad}*1))]]" disabled="true" /></td>
+                            <td class="sheet-c2"><button type="roll" name="roll_repCRatk" value="&{template:default}{{name=@{character_name} uses @{CRpwr} on @{target|token_name}}}{{Success if=[[d100]]&#8804;[[@{ck05}+?{Misc Adjustment|0}]]}}{{Damage=[[@{CRatk}]]}}{{Type=@{CRatkType}}}{{CP Cost=?{Range Category?|Short,[[@{CRadjCP}]]|Medium,[[(ceil(1.25*@{CRadjCP}))]]|Long,[[(ceil(1.5*@{CRadjCP}))]]|Extreme,[[2*@{CRadjCP}]]}}}"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+</div>
+
+<div class="sheet-tab-content sheet-tab3">
+
+<div class="sheet-layout-gear">
+    <h1>Reserved for Equipment and Gear</h1>
+    <h3>Coming Soon!!</h3>
+</div>
+    
+</div>
+
+<div class="sheet-tab-content sheet-tab4">
+
+<div class="sheet-layout-vehicles">
+    <h1>Reserved for Surface Craft</h1>
+    <h3>Coming Soon!!</h3>
+</div>
+    
+</div>
+
+<div class="sheet-tab-content sheet-tab5">
+
+<div class="sheet-layout-ships">
+    <h1>Reserved for Space Craft</h1>
+    <h3>Coming Soon!!</h3>
+</div>
+    
+</div>
+
+<div class="sheet-tab-content sheet-tab6">
+
+<div class="sheet-layout-notes">
+    <div class="sheet-notes1">
+        <h3>Racial Notes</h3>
+        <textarea class="sheet-notes-top" name="attr_raceNotes"></textarea>
+    </div>
+    <div class="sheet-notes2">
+        <h3>Cybernetics Notes</h3>
+        <textarea class="sheet-notes-top" name="attr_cyberNotes"></textarea>
+    </div>
+    <div class="sheet-notes3">
+    <h3>Resource Notes</h3>
+        <textarea class="sheet-notes-gen" name="attr_resourceNotes"></textarea>
+    </div>
+    <div class="sheet-notes3">
+    <h3>General Notes</h3>
+        <textarea class="sheet-notes-gen" name="attr_genNotes"></textarea>
+    </div>
+</div>
+    
+</div>
